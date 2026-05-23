@@ -5,9 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://bim3mxqkqhgmb" path="res://menu/scenes/escena1prueba.png" id="2_c71sj"]
 [ext_resource type="PackedScene" uid="uid://5tymkgxi4r7n" path="res://menu/scenes/fade_transition.tscn" id="3_c71sj"]
 [ext_resource type="PackedScene" uid="uid://dwijkvcx0yk2i" path="res://Sprites Reserva/Diario.tscn" id="5_kcegm"]
+[ext_resource type="PackedScene" uid="uid://rr55eobxg5pk" path="res://scenes/libreta.tscn" id="6_ym1ip"]
 
-[node name="Primera_escena" type="Node2D" unique_id=663303511]
+[node name="Primera_escena" type="Node2D" unique_id=663303511 node_paths=PackedStringArray("menu_libreta")]
 script = ExtResource("1_g71ks")
+menu_libreta = NodePath("CanvasLayer/Libreta")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1334505764]
 position = Vector2(2263, 495)
@@ -18,8 +20,14 @@ texture = ExtResource("2_c71sj")
 position = Vector2(145.99998, 506)
 scale = Vector2(0.4, 0.4)
 
-[node name="Fade_transition" parent="." unique_id=1322112068 instance=ExtResource("3_c71sj")]
-
 [node name="Node2D" parent="." unique_id=1882681361 instance=ExtResource("5_kcegm")]
 position = Vector2(660, 476)
 scale = Vector2(0.5, 0.5)
+
+[node name="Fade_transition" parent="." unique_id=1322112068 instance=ExtResource("3_c71sj")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1290073855]
+
+[node name="Libreta" parent="CanvasLayer" unique_id=483968865 instance=ExtResource("6_ym1ip")]
+process_mode = 3
+visible = false

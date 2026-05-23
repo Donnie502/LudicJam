@@ -37,3 +37,6 @@ func player_animation():
 			$AnimatedSprite2D.flip_h = false
 		elif velocity.x < 0: # Va a la izquierda
 			$AnimatedSprite2D.flip_h = true
+			
+		
+		

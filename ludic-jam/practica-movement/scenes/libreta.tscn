@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://rr55eobxg5pk"]
+
+[ext_resource type="Script" uid="uid://nb08cmojcy8f" path="res://scenes/libreta.gd" id="1_6wtjy"]
+[ext_resource type="Texture2D" uid="uid://bru1pn6mjsd7p" path="res://Sprites Reserva/iventario_mock.png" id="1_kworr"]
+[ext_resource type="Texture2D" uid="uid://cjst1fa1dyhxw" path="res://Sprites Reserva/LLAVE_MOCK.png" id="3_4bkbr"]
+
+[node name="Libreta" type="Node2D" unique_id=483968865]
+script = ExtResource("1_6wtjy")
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=1632737723]
+position = Vector2(576, 324)
+texture = ExtResource("1_kworr")
+
+[node name="DibujoLlave" type="Sprite2D" parent="Fondo" unique_id=946218823]
+position = Vector2(-243, -248.99997)
+scale = Vector2(0.23, 0.24)
+texture = ExtResource("3_4bkbr")
