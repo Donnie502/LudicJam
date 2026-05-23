@@ -25,6 +25,10 @@ MenuMusic="*res://menu/scenes/menu_music.tscn"
 DialogueManager="*uid://c3rodes2l3gxb"
 Progreso="*uid://c6nfmg7xmjku"
 
+[dialogue_manager]
+
+runtime/balloon_path="res://menu/scenes/dialoguesScenes/balloon.tscn"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
@@ -69,7 +73,7 @@ abrir_libreta={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogues/primerDialogo.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogues/primerDialogo.dialogue", "res://dialogues/untitled.dialogue")
 
 [rendering]
 

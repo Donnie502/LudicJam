@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dek5t7vl6o7bj"]
+
+[ext_resource type="Script" uid="uid://cladr6l1r5m2k" path="res://npc.gd" id="1_kh24r"]
+[ext_resource type="Texture2D" uid="uid://d2n8ck6cpxtas" path="res://Sprites Reserva/262-2629364_resident-evil-leon-png-clip-art-stock-leon.png" id="2_ul7y6"]
+[ext_resource type="Texture2D" uid="uid://dqgbu8cyey5jw" path="res://Sprites Simbolos/simboloExclamacion.png" id="3_bc6q4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kh24r"]
+
+[node name="npc" type="Area2D" unique_id=1836396181]
+script = ExtResource("1_kh24r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=564701832]
+scale = Vector2(19.135, 19.135)
+shape = SubResource("CircleShape2D_kh24r")
+
+[node name="Leon" type="Sprite2D" parent="." unique_id=672887733]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_ul7y6")
+
+[node name="exclamacion" type="Sprite2D" parent="." unique_id=1468835271]
+position = Vector2(2.999998, -252)
+scale = Vector2(0.15, 0.149)
+texture = ExtResource("3_bc6q4")

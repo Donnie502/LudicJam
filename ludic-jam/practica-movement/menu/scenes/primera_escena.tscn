@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://s8ebrfxlr246" path="res://LlaveTirada.tscn" id="4_y6eed"]
 [ext_resource type="PackedScene" uid="uid://dwijkvcx0yk2i" path="res://Sprites Reserva/Diario.tscn" id="5_kcegm"]
 [ext_resource type="PackedScene" uid="uid://rr55eobxg5pk" path="res://scenes/libreta.tscn" id="6_ym1ip"]
+[ext_resource type="PackedScene" uid="uid://dek5t7vl6o7bj" path="res://npc.tscn" id="7_y6eed"]
 
 [node name="Primera_escena" type="Node2D" unique_id=663303511 node_paths=PackedStringArray("menu_libreta")]
 script = ExtResource("1_g71ks")
@@ -36,3 +37,7 @@ scale = Vector2(0.5, 0.5)
 [node name="Libreta" parent="CanvasLayer" unique_id=483968865 instance=ExtResource("6_ym1ip")]
 process_mode = 3
 visible = false
+
+[node name="npc" parent="." unique_id=1085456900 instance=ExtResource("7_y6eed")]
+position = Vector2(913, 436)
+scale = Vector2(0.42, 0.42)
