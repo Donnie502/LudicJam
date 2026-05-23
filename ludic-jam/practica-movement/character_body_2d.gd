@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@export var speed = 150
+@export var walk_speed = 150
+@export var run_speed = 300 
 
 func _physics_process(_delta):
 	get_input()
@@ -10,7 +11,12 @@ func _physics_process(_delta):
 # MOVIMIENTO
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-	velocity = input_direction * speed
+	
+	# Usamos el nombre de la acción tal como lo escribiste: "correr"
+	if Input.is_action_pressed("correr"):
+		velocity = input_direction * run_speed
+	else:
+		velocity = input_direction * walk_speed
 
 # ANIMACIÓN
 func player_animation():
@@ -20,7 +26,11 @@ func player_animation():
 		
 	# Si hay velocidad (se está moviendo)
 	else:
-		$AnimatedSprite2D.play("walk")
+		if Input.is_action_pressed("correr"):
+			# $AnimatedSprite2D.play("run") 
+			$AnimatedSprite2D.play("walk") 
+		else:
+			$AnimatedSprite2D.play("walk")
 		
 		# Revisamos si se mueve en el eje X (izquierda/derecha) para voltear el sprite
 		if velocity.x > 0: # Va a la derecha
