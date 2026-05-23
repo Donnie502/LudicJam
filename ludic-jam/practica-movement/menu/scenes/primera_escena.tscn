@@ -1,20 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://d4ix7pipui57h"]
+[gd_scene format=3 uid="uid://d4ix7pipui57h"]
 
 [ext_resource type="Script" uid="uid://dgl7dq5qsi82l" path="res://menu/scenes/primera_escena.gd" id="1_g71ks"]
 [ext_resource type="PackedScene" uid="uid://crv8rglddfebw" path="res://node_2d.tscn" id="1_txwpf"]
 [ext_resource type="Texture2D" uid="uid://bim3mxqkqhgmb" path="res://menu/scenes/escena1prueba.png" id="2_c71sj"]
 [ext_resource type="PackedScene" uid="uid://5tymkgxi4r7n" path="res://menu/scenes/fade_transition.tscn" id="3_c71sj"]
 
-[node name="Primera_escena" type="Node2D"]
+[node name="Primera_escena" type="Node2D" unique_id=663303511]
 script = ExtResource("1_g71ks")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1334505764]
 position = Vector2(2263, 495)
 scale = Vector2(0.2834219, 0.3301562)
 texture = ExtResource("2_c71sj")
 
-[node name="Character" parent="." instance=ExtResource("1_txwpf")]
-position = Vector2(-89, 363)
+[node name="Character" parent="." unique_id=593136599 instance=ExtResource("1_txwpf")]
+position = Vector2(145.99998, 506)
 scale = Vector2(0.4, 0.4)
 
-[node name="Fade_transition" parent="." instance=ExtResource("3_c71sj")]
+[node name="Fade_transition" parent="." unique_id=1322112068 instance=ExtResource("3_c71sj")]

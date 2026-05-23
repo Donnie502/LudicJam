@@ -124,5 +124,7 @@ frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1791650678]
 position = Vector2(18, -122)
+limit_left = 100
+limit_bottom = 700
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
