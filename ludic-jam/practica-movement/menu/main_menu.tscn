@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://7dhvw1yq3ng1"]
+
+[ext_resource type="Script" uid="uid://bbexoyodwwdrj" path="res://main_menu.gd" id="1_chmv6"]
+[ext_resource type="Texture2D" uid="uid://d2hxhyet1vmgn" path="res://menu/Buttons/BTN_COMENZAR.png" id="2_jc45y"]
+[ext_resource type="Texture2D" uid="uid://c66vhtxvmqx3g" path="res://menu/Buttons/MENU_PRINCIPAL.png" id="2_s8mfa"]
+[ext_resource type="Texture2D" uid="uid://cw3ybkjtq873e" path="res://menu/Buttons/BTN_COMENZAR_ALT-export.png" id="3_s8mfa"]
+[ext_resource type="Texture2D" uid="uid://bfkr6kksg32i" path="res://menu/Buttons/BTN_SALIR.png" id="4_0tw43"]
+[ext_resource type="Texture2D" uid="uid://dwu1hpvf5i0ki" path="res://menu/Buttons/BTN_SALIR_ALT-export.png" id="5_youj7"]
+[ext_resource type="PackedScene" uid="uid://5tymkgxi4r7n" path="res://menu/scenes/fade_transition.tscn" id="7_0tw43"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_chmv6")
+
+[node name="MenuPrincipal" type="Sprite2D" parent="."]
+position = Vector2(574.75, 325.00003)
+scale = Vector2(0.71781254, 0.71999997)
+texture = ExtResource("2_s8mfa")
+
+[node name="Button_manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Comenzar" type="TextureButton" parent="Button_manager"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 428.0
+offset_right = 310.0
+offset_bottom = 500.0
+texture_normal = ExtResource("2_jc45y")
+texture_hover = ExtResource("3_s8mfa")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Salir" type="TextureButton" parent="Button_manager"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 519.0
+offset_right = 311.0
+offset_bottom = 591.0
+texture_normal = ExtResource("4_0tw43")
+texture_hover = ExtResource("5_youj7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fade_transition" parent="." instance=ExtResource("7_0tw43")]
+visible = false
+
+[node name="fade_timer" type="Timer" parent="Fade_transition"]
+
+[connection signal="pressed" from="Button_manager/Comenzar" to="." method="_on_comenzar_pressed"]
+[connection signal="pressed" from="Button_manager/Salir" to="." method="_on_salir_pressed"]
+[connection signal="timeout" from="Fade_transition/fade_timer" to="." method="_on_fade_timer_timeout"]
