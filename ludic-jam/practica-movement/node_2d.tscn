@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://crv8rglddfebw"]
+[gd_scene format=3 uid="uid://crv8rglddfebw"]
 
 [ext_resource type="Script" uid="uid://dgo2ycgk3w25h" path="res://character_body_2d.gd" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://cq03ivqku3xtj" path="res://player.png" id="2_0e48y"]
@@ -104,20 +104,25 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Character" type="Node2D"]
+[node name="Character" type="Node2D" unique_id=1198667270]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=286566580]
 script = ExtResource("1_wtcfe")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(380, 343)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=533572701]
+position = Vector2(-2, -22)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_epypp")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(385.99997, 156)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=660337226]
+position = Vector2(2, -205)
 scale = Vector2(10.093751, 9.267859)
 sprite_frames = SubResource("SpriteFrames_rj586")
 animation = &"walk"
 frame = 7
 frame_progress = 1.0
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1791650678]
+position = Vector2(18, -122)
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
