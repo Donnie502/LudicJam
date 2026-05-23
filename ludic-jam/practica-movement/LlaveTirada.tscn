@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://s8ebrfxlr246"]
+
+[ext_resource type="Texture2D" uid="uid://cjst1fa1dyhxw" path="res://Sprites Reserva/LLAVE_MOCK.png" id="1_inetf"]
+[ext_resource type="Script" uid="uid://dkgkb4tjrmtp4" path="res://llave_tirada.gd" id="1_u2lpu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u2lpu"]
+radius = 353.051
+
+[node name="Llave tirada" type="Area2D" unique_id=671285194]
+script = ExtResource("1_u2lpu")
+
+[node name="llave" type="Sprite2D" parent="." unique_id=1244055113]
+texture = ExtResource("1_inetf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1898582311]
+shape = SubResource("CircleShape2D_u2lpu")

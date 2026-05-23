@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://crv8rglddfebw" path="res://node_2d.tscn" id="1_txwpf"]
 [ext_resource type="Texture2D" uid="uid://bim3mxqkqhgmb" path="res://menu/scenes/escena1prueba.png" id="2_c71sj"]
 [ext_resource type="PackedScene" uid="uid://5tymkgxi4r7n" path="res://menu/scenes/fade_transition.tscn" id="3_c71sj"]
+[ext_resource type="PackedScene" uid="uid://s8ebrfxlr246" path="res://LlaveTirada.tscn" id="4_y6eed"]
 [ext_resource type="PackedScene" uid="uid://dwijkvcx0yk2i" path="res://Sprites Reserva/Diario.tscn" id="5_kcegm"]
 [ext_resource type="PackedScene" uid="uid://rr55eobxg5pk" path="res://scenes/libreta.tscn" id="6_ym1ip"]
 
@@ -19,6 +20,10 @@ texture = ExtResource("2_c71sj")
 [node name="Character" parent="." unique_id=593136599 instance=ExtResource("1_txwpf")]
 position = Vector2(145.99998, 506)
 scale = Vector2(0.4, 0.4)
+
+[node name="Llave tirada" parent="." unique_id=671285194 instance=ExtResource("4_y6eed")]
+position = Vector2(759, 482)
+scale = Vector2(0.07, 0.07)
 
 [node name="Node2D" parent="." unique_id=1882681361 instance=ExtResource("5_kcegm")]
 position = Vector2(660, 476)
