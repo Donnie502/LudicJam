@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bs473vnlch00b" path="res://CINEMATICAS/escena1manejando-Sheet.png" id="1_85xfp"]
 [ext_resource type="Script" uid="uid://cdutsgpslsxft" path="res://CINEMATICAS/escena_1_manejando.gd" id="1_jy2oh"]
 [ext_resource type="Script" uid="uid://b1oo17pwri16x" path="res://CINEMATICAS/animated_sprite_2d.gd" id="2_4jwyn"]
+[ext_resource type="AudioStream" uid="uid://dbo3udqsg8opj" path="res://CINEMATICAS/sonidos/Troca_inicio_final.mp3" id="4_fabhp"]
+[ext_resource type="AudioStream" uid="uid://c8lgvrcsg3qsw" path="res://CINEMATICAS/sonidos/Troca_moviendose_final.mp3" id="5_omok1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4jwyn"]
 atlas = ExtResource("1_85xfp")
@@ -71,6 +73,25 @@ tracks/1/keys = {
 "method": &"ir_al_nivel_jugable"
 }]
 }
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoTroca")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_fabhp")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.78098524,
+"stream": ExtResource("5_omok1")
+}],
+"times": PackedFloat32Array(0.03333333, 1.4190149)
+}
+tracks/2/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_16376"]
 _data = {
@@ -85,9 +106,16 @@ position = Vector2(570.5, 318)
 scale = Vector2(0.9591667, 0.97999996)
 sprite_frames = SubResource("SpriteFrames_iwihv")
 animation = &"manejando"
-frame_progress = 0.8698081
+frame_progress = 0.92148966
 script = ExtResource("2_4jwyn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1784603045]
 libraries/ = SubResource("AnimationLibrary_16376")
 autoplay = &"escena_1_manejando"
+
+[node name="SonidoTroca" type="AudioStreamPlayer2D" parent="." unique_id=2076195204]
+volume_db = 9.707
+
+[node name="trocalargo" type="AudioStreamPlayer2D" parent="." unique_id=44604064]
+stream = ExtResource("5_omok1")
+volume_db = -70.721

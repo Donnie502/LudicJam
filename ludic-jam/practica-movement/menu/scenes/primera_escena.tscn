@@ -14,7 +14,7 @@ script = ExtResource("1_g71ks")
 menu_libreta = NodePath("CanvasLayer/Libreta")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1334505764]
-position = Vector2(2263, 495)
+position = Vector2(2500, 495)
 scale = Vector2(0.2834219, 0.3301562)
 texture = ExtResource("2_c71sj")
 
