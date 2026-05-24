@@ -30,8 +30,6 @@ scale = Vector2(0.07, 0.07)
 position = Vector2(660, 476)
 scale = Vector2(0.5, 0.5)
 
-[node name="Fade_transition" parent="." unique_id=1322112068 instance=ExtResource("3_c71sj")]
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1290073855]
 
 [node name="Libreta" parent="CanvasLayer" unique_id=483968865 instance=ExtResource("6_ym1ip")]
@@ -41,3 +39,5 @@ visible = false
 [node name="npc" parent="." unique_id=1085456900 instance=ExtResource("7_y6eed")]
 position = Vector2(913, 436)
 scale = Vector2(0.42, 0.42)
+
+[node name="Fade_transition" parent="." unique_id=1322112068 instance=ExtResource("3_c71sj")]
