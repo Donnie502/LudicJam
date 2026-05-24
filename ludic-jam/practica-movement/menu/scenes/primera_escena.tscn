@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dgl7dq5qsi82l" path="res://menu/scenes/primera_escena.gd" id="1_g71ks"]
 [ext_resource type="PackedScene" uid="uid://crv8rglddfebw" path="res://node_2d.tscn" id="1_txwpf"]
+[ext_resource type="Texture2D" uid="uid://g8yp4pmf2nhs" path="res://CINEMATICAS/escena1 corregidafinal.png" id="2_r8xsp"]
 [ext_resource type="PackedScene" uid="uid://5tymkgxi4r7n" path="res://menu/scenes/fade_transition.tscn" id="3_c71sj"]
 [ext_resource type="PackedScene" uid="uid://s8ebrfxlr246" path="res://LlaveTirada.tscn" id="4_y6eed"]
 [ext_resource type="Script" uid="uid://dbo4a4jo0h7y5" path="res://menu/scenes/entrada_iglesia.gd" id="5_85yqa"]
@@ -10,10 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://rr55eobxg5pk" path="res://scenes/libreta.tscn" id="6_ym1ip"]
 [ext_resource type="Texture2D" uid="uid://drsiyr1hj4lyi" path="res://Sprites Reserva/cartel.png" id="9_ikibh"]
 [ext_resource type="Texture2D" uid="uid://bjvvu86h7sy4c" path="res://Sprites Reserva/cartel minas naica.png" id="10_85yqa"]
-[ext_resource type="Texture2D" uid="uid://ubi62nhffauk" path="res://Sprites Reserva/iglesia.png" id="11_85yqa"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sot3g"]
-load_path = "res://.godot/imported/escena1prueba.png-e1c5e06643fdfe1293e77c3bdf265ee8.ctex"
+[ext_resource type="Texture2D" uid="uid://plpj0tf68vca" path="res://CINEMATICAS/IGLESIA corregidafinal.png" id="10_bfb53"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikibh"]
 size = Vector2(184, 527)
@@ -37,13 +35,14 @@ menu_libreta = NodePath("CanvasLayer/Libreta")
 [node name="Fondo" type="Sprite2D" parent="." unique_id=1334505764]
 position = Vector2(2500, 495)
 scale = Vector2(0.2834219, 0.3301562)
-texture = SubResource("CompressedTexture2D_sot3g")
+texture = ExtResource("2_r8xsp")
 
 [node name="Llave tirada" parent="." unique_id=671285194 instance=ExtResource("4_y6eed")]
-position = Vector2(759, 482)
+position = Vector2(1239, 428.85)
 scale = Vector2(0.07, 0.07)
 
 [node name="Node2D" parent="." unique_id=1882681361 instance=ExtResource("5_kcegm")]
+visible = false
 position = Vector2(660, 476)
 scale = Vector2(0.5, 0.5)
 
@@ -56,14 +55,14 @@ visible = false
 script = ExtResource("5_85yqa")
 
 [node name="salida_minas" type="CollisionShape2D" parent="EntradaIglesia" unique_id=428279375]
-position = Vector2(3580, 328)
+position = Vector2(2883, 328)
 shape = SubResource("RectangleShape2D_ikibh")
 
 [node name="SalidaDesierto" type="Area2D" parent="." unique_id=1246352075]
 script = ExtResource("6_r8xsp")
 
 [node name="salida_minas" type="CollisionShape2D" parent="SalidaDesierto" unique_id=398449099]
-position = Vector2(4446, 328)
+position = Vector2(4027, 327)
 shape = SubResource("RectangleShape2D_ikibh")
 
 [node name="Limites" type="Node2D" parent="." unique_id=1388648389]
@@ -79,12 +78,12 @@ position = Vector2(2515.25, 603)
 shape = SubResource("RectangleShape2D_bfb53")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Limites/Limites" unique_id=153497919]
-position = Vector2(4532, 114)
+position = Vector2(4141, 112)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_4yfbl")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Limites/Limites" unique_id=2114453024]
-position = Vector2(238, -53)
+position = Vector2(732.23, -53)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_85yqa")
 
@@ -94,16 +93,20 @@ scale = Vector2(0.702, 0.58)
 texture = ExtResource("9_ikibh")
 
 [node name="cartelMinas" type="Sprite2D" parent="." unique_id=1693838760]
-position = Vector2(4488, 400)
+position = Vector2(4029, 394)
 texture = ExtResource("10_85yqa")
 
 [node name="iglesia" type="Sprite2D" parent="." unique_id=1663457360]
-position = Vector2(3756, 192.99998)
+position = Vector2(3075.0002, 192)
 scale = Vector2(2.8375, 3.6555555)
-texture = ExtResource("11_85yqa")
+texture = ExtResource("10_bfb53")
 
 [node name="Character" parent="." unique_id=593136599 instance=ExtResource("1_txwpf")]
-position = Vector2(429, 506)
+position = Vector2(809.16, 506)
 scale = Vector2(0.4, 0.4)
 
 [node name="Fade_transition" parent="." unique_id=1322112068 instance=ExtResource("3_c71sj")]
+offset_left = 146.0
+offset_top = 1.0
+offset_right = 1819.0
+offset_bottom = 967.0

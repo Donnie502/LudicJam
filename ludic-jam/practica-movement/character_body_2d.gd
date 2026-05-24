@@ -30,7 +30,7 @@ func player_animation():
 		$AnimatedSprite2D.play("idle")
 	else:
 		if Input.is_action_pressed("correr"):
-			$AnimatedSprite2D.play("walk")
+			$AnimatedSprite2D.play("correr")
 		else:
 			$AnimatedSprite2D.play("walk")
 		if velocity.x > 0:

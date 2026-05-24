@@ -2,9 +2,70 @@
 
 [ext_resource type="Script" uid="uid://dgo2ycgk3w25h" path="res://character_body_2d.gd" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://b4y7povscxybp" path="res://Sprites Reserva/spritesheetIdle.png" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://5b75ah72h7h4" path="res://Sprites Reserva/RUNEMILIO.png" id="3_0hol4"]
 [ext_resource type="Texture2D" uid="uid://cxvk882dfl35u" path="res://Sprites Reserva/spritesheetWalk.png" id="3_epypp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0e48y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
+atlas = ExtResource("3_0hol4")
+region = Rect2(0, 0, 1920, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d21ai"]
+atlas = ExtResource("3_0hol4")
+region = Rect2(1920, 0, 1920, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2bti"]
+atlas = ExtResource("3_0hol4")
+region = Rect2(3840, 0, 1920, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ta5nu"]
+atlas = ExtResource("3_0hol4")
+region = Rect2(5760, 0, 1920, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flf07"]
+atlas = ExtResource("3_0hol4")
+region = Rect2(7680, 0, 1920, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k73cj"]
+atlas = ExtResource("3_0hol4")
+region = Rect2(9600, 0, 1920, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjqkl"]
+atlas = ExtResource("3_0hol4")
+region = Rect2(11520, 0, 1920, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fs4d3"]
+atlas = ExtResource("3_0hol4")
+region = Rect2(13440, 0, 1920, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vxoj"]
+atlas = ExtResource("3_0hol4")
+region = Rect2(15360, 0, 1920, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei405"]
+atlas = ExtResource("3_0hol4")
+region = Rect2(17280, 0, 1920, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8dv2"]
+atlas = ExtResource("3_0hol4")
+region = Rect2(19200, 0, 1920, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nhjh"]
+atlas = ExtResource("3_0hol4")
+region = Rect2(21120, 0, 1920, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjha6"]
+atlas = ExtResource("3_0hol4")
+region = Rect2(23040, 0, 1920, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gt76g"]
+atlas = ExtResource("3_0hol4")
+region = Rect2(24960, 0, 1920, 1920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fr6y"]
+atlas = ExtResource("3_0hol4")
+region = Rect2(26880, 0, 1920, 1920)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0hol4"]
 atlas = ExtResource("2_epypp")
@@ -44,6 +105,56 @@ region = Rect2(11520, 0, 1920, 1920)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rj586"]
 animations = [{
+"frames": [{
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_kdubu")
+}, {
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_d21ai")
+}, {
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_d2bti")
+}, {
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_ta5nu")
+}, {
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_flf07")
+}, {
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_k73cj")
+}, {
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_rjqkl")
+}, {
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_fs4d3")
+}, {
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_7vxoj")
+}, {
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_ei405")
+}, {
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_e8dv2")
+}, {
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_2nhjh")
+}, {
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_bjha6")
+}, {
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_gt76g")
+}, {
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_1fr6y")
+}],
+"loop": true,
+"name": &"correr",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 3.0,
 "texture": SubResource("AtlasTexture_0hol4")
@@ -99,8 +210,8 @@ shape = SubResource("CircleShape2D_0e48y")
 position = Vector2(-2, -101)
 scale = Vector2(0.15, 0.138)
 sprite_frames = SubResource("SpriteFrames_rj586")
-animation = &"idle"
-frame_progress = 0.60587865
+animation = &"correr"
+frame_progress = 0.7728107
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1791650678]
 position = Vector2(18, -122)

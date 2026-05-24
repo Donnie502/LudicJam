@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://duvsbo0ol3s4g"]
 
-[ext_resource type="Texture2D" uid="uid://dmm45trk3v7m4" path="res://scenes/sceneIglesia/outdoorIglesia.png" id="1_21md7"]
+[ext_resource type="Texture2D" uid="uid://c5lyvjt53hdm4" path="res://CINEMATICAS/outdoorIglesia CORREGIDAFINAL.png" id="1_l5tf0"]
 [ext_resource type="PackedScene" uid="uid://crv8rglddfebw" path="res://node_2d.tscn" id="2_l5tf0"]
 [ext_resource type="PackedScene" uid="uid://dek5t7vl6o7bj" path="res://npc.tscn" id="3_iobs7"]
 [ext_resource type="Script" uid="uid://bmq8ap4s3uplm" path="res://scenes/sceneIglesia/entrada_iglesia.gd" id="4_l5tf0"]
@@ -24,20 +24,20 @@ size = Vector2(4560.5, 20)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=596957187]
 texture_filter = 1
-texture = ExtResource("1_21md7")
+texture = ExtResource("1_l5tf0")
 
 [node name="Character" parent="." unique_id=1198667270 instance=ExtResource("2_l5tf0")]
 position = Vector2(-384, 123)
 
 [node name="npc" parent="." unique_id=1836396181 instance=ExtResource("3_iobs7")]
 texture_filter = 1
-position = Vector2(811, -13)
+position = Vector2(611, 18)
 
 [node name="EntradaIglesia" type="Area2D" parent="." unique_id=1434326602]
 script = ExtResource("4_l5tf0")
 
 [node name="salida_minas" type="CollisionShape2D" parent="EntradaIglesia" unique_id=218797247]
-position = Vector2(-861, 96)
+position = Vector2(-576, 57)
 shape = SubResource("RectangleShape2D_g6blp")
 
 [node name="Limites" type="Node2D" parent="." unique_id=1115410698]
@@ -53,11 +53,11 @@ position = Vector2(-176, 273)
 shape = SubResource("RectangleShape2D_ntek3")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Limites/Limites" unique_id=1550020326]
-position = Vector2(970, 19)
+position = Vector2(568, 29)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_0q3q8")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Limites/Limites" unique_id=1585717903]
-position = Vector2(-950, 54)
+position = Vector2(-654, 85)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_hplwl")
