@@ -103,6 +103,8 @@ animations = [{
 }]
 
 [node name="Character" type="Node2D" unique_id=1198667270]
+light_mask = 3
+visibility_layer = 3
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=286566580]
 script = ExtResource("1_wtcfe")
@@ -123,7 +125,10 @@ frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1791650678]
 position = Vector2(18, -122)
-limit_left = 100
-limit_bottom = 700
+limit_enabled = false
+limit_left = -177
+limit_top = -9999997
+limit_right = 9999723
+limit_bottom = 703
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b54dwra0l6tyt"]
+
+[ext_resource type="Texture2D" uid="uid://bj5yhqt313dhf" path="res://scenes/scene2/escenario 2 mock.png" id="1_l3f1p"]
+[ext_resource type="PackedScene" uid="uid://crv8rglddfebw" path="res://node_2d.tscn" id="2_isegt"]
+[ext_resource type="PackedScene" uid="uid://rr55eobxg5pk" path="res://scenes/libreta.tscn" id="3_isegt"]
+
+[node name="Scene2" type="Node2D" unique_id=1882154578]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2050770963]
+texture = ExtResource("1_l3f1p")
+
+[node name="Character" parent="." unique_id=1198667270 instance=ExtResource("2_isegt")]
+position = Vector2(-925, 246.99998)
+scale = Vector2(0.4, 0.4)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1487226019]
+
+[node name="Libreta" parent="CanvasLayer" unique_id=483968865 instance=ExtResource("3_isegt")]
+visible = false

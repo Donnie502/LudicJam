@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://dwijkvcx0yk2i" path="res://Sprites Reserva/Diario.tscn" id="5_kcegm"]
 [ext_resource type="PackedScene" uid="uid://rr55eobxg5pk" path="res://scenes/libreta.tscn" id="6_ym1ip"]
 [ext_resource type="PackedScene" uid="uid://dek5t7vl6o7bj" path="res://npc.tscn" id="7_y6eed"]
+[ext_resource type="Script" uid="uid://lqsdlbla6i5i" path="res://menu/scenes/salida.gd" id="9_jfxo2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikibh"]
+size = Vector2(61.5, 527)
 
 [node name="Primera_escena" type="Node2D" unique_id=663303511 node_paths=PackedStringArray("menu_libreta")]
 script = ExtResource("1_g71ks")
@@ -19,7 +23,7 @@ scale = Vector2(0.2834219, 0.3301562)
 texture = ExtResource("2_c71sj")
 
 [node name="Character" parent="." unique_id=593136599 instance=ExtResource("1_txwpf")]
-position = Vector2(145.99998, 506)
+position = Vector2(429, 506)
 scale = Vector2(0.4, 0.4)
 
 [node name="Llave tirada" parent="." unique_id=671285194 instance=ExtResource("4_y6eed")]
@@ -41,3 +45,10 @@ position = Vector2(913, 436)
 scale = Vector2(0.42, 0.42)
 
 [node name="Fade_transition" parent="." unique_id=1322112068 instance=ExtResource("3_c71sj")]
+
+[node name="salida" type="Area2D" parent="." unique_id=1054351308]
+script = ExtResource("9_jfxo2")
+
+[node name="salida_minas" type="CollisionShape2D" parent="salida" unique_id=428279375]
+position = Vector2(4496, 280)
+shape = SubResource("RectangleShape2D_ikibh")
