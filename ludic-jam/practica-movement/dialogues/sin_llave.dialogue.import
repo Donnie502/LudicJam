@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://js807n7ode5b"
+path="res://.godot/imported/sin_llave.dialogue-1b94c191017f825e8df81c1eae96a05f.tres"
+
+[deps]
+
+source_file="res://dialogues/sin_llave.dialogue"
+dest_files=["res://.godot/imported/sin_llave.dialogue-1b94c191017f825e8df81c1eae96a05f.tres"]
+
+[params]
+
+defaults=true

@@ -2,14 +2,24 @@ extends Area2D
 
 var ruta_siguiente_nivel = "res://scenes/scene2/scene2.tscn"
 
-func _process(delta):
-	# Revisamos si se está presionando la tecla N
-	if Input.is_action_just_pressed("action"):
-		
-		# Obtenemos una lista de todo lo que está tocando el área
+const BALLOON = preload("res://menu/scenes/dialoguesScenes/balloon.tscn")
+const DIALOGO_SIN_LLAVE = preload("res://dialogues/sin_llave.dialogue")
+
+var dialogo_activo: bool = false
+
+func _process(_delta):
+	if Input.is_action_just_pressed("action") and not dialogo_activo:
 		var cuerpos_tocando = get_overlapping_bodies()
-		
-		# Revisamos si el Nopal Man está dentro de esa lista
 		for cuerpo in cuerpos_tocando:
 			if cuerpo.name == "CharacterBody2D":
-				get_tree().change_scene_to_file(ruta_siguiente_nivel)
+				if Progreso.tiene_llave_oxidada:
+					get_tree().change_scene_to_file(ruta_siguiente_nivel)
+				else:
+					_mostrar_mensaje_sin_llave()
+
+func _mostrar_mensaje_sin_llave() -> void:
+	dialogo_activo = true
+	var dm = get_node("/root/DialogueManager")
+	dm.show_dialogue_balloon_scene(BALLOON, DIALOGO_SIN_LLAVE, "sin_llave")
+	await dm.dialogue_ended
+	dialogo_activo = false
