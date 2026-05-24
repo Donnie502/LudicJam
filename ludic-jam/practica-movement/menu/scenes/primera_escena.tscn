@@ -17,6 +17,18 @@ load_path = "res://.godot/imported/escena1prueba.png-e1c5e06643fdfe1293e77c3bdf2
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikibh"]
 size = Vector2(61.5, 527)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8xsp"]
+size = Vector2(4560.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfb53"]
+size = Vector2(4560.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4yfbl"]
+size = Vector2(4560.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_85yqa"]
+size = Vector2(4560.5, 20)
+
 [node name="Primera_escena" type="Node2D" unique_id=663303511 node_paths=PackedStringArray("menu_libreta")]
 script = ExtResource("1_g71ks")
 menu_libreta = NodePath("CanvasLayer/Libreta")
@@ -58,21 +70,25 @@ shape = SubResource("RectangleShape2D_ikibh")
 
 [node name="Limites" type="Node2D" parent="." unique_id=1388648389]
 
-[node name="LimiteIzquierdo" type="StaticBody2D" parent="Limites" unique_id=1873046175]
+[node name="Limites" type="StaticBody2D" parent="Limites" unique_id=1873046175]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/LimiteIzquierdo" unique_id=1752887171]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Limites" unique_id=1752887171]
+position = Vector2(2517, 356)
+shape = SubResource("RectangleShape2D_r8xsp")
 
-[node name="LimiteDerecho" type="StaticBody2D" parent="Limites" unique_id=989277029]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Limites/Limites" unique_id=280151102]
+position = Vector2(2515.25, 603)
+shape = SubResource("RectangleShape2D_bfb53")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/LimiteDerecho" unique_id=1441578078]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Limites/Limites" unique_id=153497919]
+position = Vector2(4532, 114)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_4yfbl")
 
-[node name="LimiteSuperior" type="StaticBody2D" parent="Limites" unique_id=2047662573]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/LimiteSuperior" unique_id=1246958402]
-
-[node name="LimiteInferior" type="StaticBody2D" parent="Limites" unique_id=2052448280]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/LimiteInferior" unique_id=1185468503]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Limites/Limites" unique_id=2114453024]
+position = Vector2(238, -53)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_85yqa")
 
 [node name="cartelTutorial" type="Sprite2D" parent="." unique_id=1026615501]
 position = Vector2(1151.9999, 427.99997)

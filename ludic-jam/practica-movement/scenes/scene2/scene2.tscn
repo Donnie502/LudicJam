@@ -5,6 +5,18 @@
 [ext_resource type="PackedScene" uid="uid://rr55eobxg5pk" path="res://scenes/libreta.tscn" id="3_isegt"]
 [ext_resource type="PackedScene" uid="uid://1cji7bm7rp1r" path="res://scenes/scene2/fireball.tscn" id="4_idyeo"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idyeo"]
+size = Vector2(7590.251, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tjm6"]
+size = Vector2(7515.0024, 39.99985)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k80hx"]
+size = Vector2(4560.5, 7.5004883)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5m2e"]
+size = Vector2(4560.5, 20)
+
 [sub_resource type="Animation" id="Animation_1tjm6"]
 length = 40.0
 tracks/0/type = "value"
@@ -48,8 +60,31 @@ _data = {
 texture = ExtResource("1_l3f1p")
 
 [node name="Character" parent="." unique_id=1198667270 instance=ExtResource("2_isegt")]
-position = Vector2(-925, 246.99998)
+position = Vector2(-966, 320.99997)
 scale = Vector2(0.4, 0.4)
+
+[node name="Limites" type="StaticBody2D" parent="Character" unique_id=2144543099]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/Limites" unique_id=1396025888]
+position = Vector2(2374.8745, 275.00006)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_idyeo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Character/Limites" unique_id=1742534867]
+position = Vector2(2427.4995, -749.9992)
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("RectangleShape2D_1tjm6")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Character/Limites" unique_id=118014613]
+position = Vector2(6149.9995, -989.99994)
+rotation = 1.5707964
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_k80hx")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Character/Limites" unique_id=783361278]
+position = Vector2(-1342.4999, -369.99994)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_k5m2e")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1487226019]
 
