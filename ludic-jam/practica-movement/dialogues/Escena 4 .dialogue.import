@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://drynbgxogbuor"
+path="res://.godot/imported/Escena 4 .dialogue-5f7d304dc743b87151162912548a579d.tres"
+
+[deps]
+
+source_file="res://dialogues/Escena 4 .dialogue"
+dest_files=["res://.godot/imported/Escena 4 .dialogue-5f7d304dc743b87151162912548a579d.tres"]
+
+[params]
+
+defaults=true
