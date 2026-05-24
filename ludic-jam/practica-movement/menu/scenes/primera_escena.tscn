@@ -6,16 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://s8ebrfxlr246" path="res://LlaveTirada.tscn" id="4_y6eed"]
 [ext_resource type="PackedScene" uid="uid://dwijkvcx0yk2i" path="res://Sprites Reserva/Diario.tscn" id="5_kcegm"]
 [ext_resource type="PackedScene" uid="uid://rr55eobxg5pk" path="res://scenes/libreta.tscn" id="6_ym1ip"]
-[ext_resource type="PackedScene" uid="uid://dek5t7vl6o7bj" path="res://npc.tscn" id="7_y6eed"]
 [ext_resource type="Texture2D" uid="uid://drsiyr1hj4lyi" path="res://Sprites Reserva/cartel.png" id="9_ikibh"]
 [ext_resource type="Script" uid="uid://lqsdlbla6i5i" path="res://menu/scenes/salida.gd" id="9_jfxo2"]
 [ext_resource type="Texture2D" uid="uid://bjvvu86h7sy4c" path="res://Sprites Reserva/cartel minas naica.png" id="10_85yqa"]
+[ext_resource type="Texture2D" uid="uid://ubi62nhffauk" path="res://Sprites Reserva/iglesia.png" id="11_85yqa"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sot3g"]
 load_path = "res://.godot/imported/escena1prueba.png-e1c5e06643fdfe1293e77c3bdf265ee8.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikibh"]
-size = Vector2(61.5, 527)
+size = Vector2(184, 527)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8xsp"]
 size = Vector2(4560.5, 20)
@@ -38,10 +38,6 @@ position = Vector2(2500, 495)
 scale = Vector2(0.2834219, 0.3301562)
 texture = SubResource("CompressedTexture2D_sot3g")
 
-[node name="Character" parent="." unique_id=593136599 instance=ExtResource("1_txwpf")]
-position = Vector2(429, 506)
-scale = Vector2(0.4, 0.4)
-
 [node name="Llave tirada" parent="." unique_id=671285194 instance=ExtResource("4_y6eed")]
 position = Vector2(759, 482)
 scale = Vector2(0.07, 0.07)
@@ -55,17 +51,11 @@ scale = Vector2(0.5, 0.5)
 [node name="Libreta" parent="CanvasLayer" unique_id=483968865 instance=ExtResource("6_ym1ip")]
 visible = false
 
-[node name="npc" parent="." unique_id=1085456900 instance=ExtResource("7_y6eed")]
-position = Vector2(913, 436)
-scale = Vector2(0.42, 0.42)
-
-[node name="Fade_transition" parent="." unique_id=1322112068 instance=ExtResource("3_c71sj")]
-
 [node name="salida" type="Area2D" parent="." unique_id=1054351308]
 script = ExtResource("9_jfxo2")
 
 [node name="salida_minas" type="CollisionShape2D" parent="salida" unique_id=428279375]
-position = Vector2(4496, 280)
+position = Vector2(3580, 328)
 shape = SubResource("RectangleShape2D_ikibh")
 
 [node name="Limites" type="Node2D" parent="." unique_id=1388648389]
@@ -98,3 +88,14 @@ texture = ExtResource("9_ikibh")
 [node name="cartelMinas" type="Sprite2D" parent="." unique_id=1693838760]
 position = Vector2(4488, 400)
 texture = ExtResource("10_85yqa")
+
+[node name="iglesia" type="Sprite2D" parent="." unique_id=1663457360]
+position = Vector2(3756, 192.99998)
+scale = Vector2(2.8375, 3.6555555)
+texture = ExtResource("11_85yqa")
+
+[node name="Character" parent="." unique_id=593136599 instance=ExtResource("1_txwpf")]
+position = Vector2(429, 506)
+scale = Vector2(0.4, 0.4)
+
+[node name="Fade_transition" parent="." unique_id=1322112068 instance=ExtResource("3_c71sj")]

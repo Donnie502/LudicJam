@@ -1,6 +1,6 @@
 extends Area2D
 
-var ruta_siguiente_nivel = "res://scenes/scene2/scene2.tscn"
+var ruta_siguiente_nivel = "res://scenes/sceneIglesia/iglesiadentro.tscn"
 
 const BALLOON = preload("res://menu/scenes/dialoguesScenes/balloon.tscn")
 const DIALOGO_SIN_LLAVE = preload("res://dialogues/sin_llave.dialogue")

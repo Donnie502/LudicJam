@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://duvsbo0ol3s4g"]
+
+[ext_resource type="Texture2D" uid="uid://dmm45trk3v7m4" path="res://scenes/sceneIglesia/outdoorIglesia.png" id="1_21md7"]
+[ext_resource type="PackedScene" uid="uid://crv8rglddfebw" path="res://node_2d.tscn" id="2_l5tf0"]
+[ext_resource type="PackedScene" uid="uid://dek5t7vl6o7bj" path="res://npc.tscn" id="3_iobs7"]
+
+[node name="iglesiadentro" type="Node2D" unique_id=2127409370]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=596957187]
+texture = ExtResource("1_21md7")
+
+[node name="Character" parent="." unique_id=1198667270 instance=ExtResource("2_l5tf0")]
+position = Vector2(-384, 123)
+
+[node name="npc" parent="." unique_id=1836396181 instance=ExtResource("3_iobs7")]
+position = Vector2(811, -13)
