@@ -4,6 +4,7 @@ extends Area2D
 # ── NUEVO ──────────────────────────────
 @onready var player = get_parent().get_node("Character/CharacterBody2D")
 # ───────────────────────────────────────
+
 const UNTITLED = preload("uid://dcwlhipyrs2q4")
 
 var is_player_close = false
