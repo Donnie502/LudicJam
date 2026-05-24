@@ -12,9 +12,7 @@ func _process(_delta):
 		for cuerpo in cuerpos_tocando:
 			if cuerpo.name == "CharacterBody2D":
 				if Progreso.tiene_llave_oxidada:
-					# ── NUEVO ──────────────────────────
-					Progreso.entro_a_iglesia = true
-					# ───────────────────────────────────
+					Progreso.entro_a_iglesia = true  # ← única línea nueva
 					get_tree().change_scene_to_file(ruta_siguiente_nivel)
 				else:
 					_mostrar_mensaje_sin_llave()

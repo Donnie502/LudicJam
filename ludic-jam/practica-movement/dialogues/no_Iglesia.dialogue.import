@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dsacv832k04f2"
+path="res://.godot/imported/no_Iglesia.dialogue-03a8261ec7619b915f2f135e1842d9fd.tres"
+
+[deps]
+
+source_file="res://dialogues/no_Iglesia.dialogue"
+dest_files=["res://.godot/imported/no_Iglesia.dialogue-03a8261ec7619b915f2f135e1842d9fd.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c21wyjteqont0"]
+
+[ext_resource type="Texture2D" uid="uid://dhtrr6dyuq3y1" path="res://Sprites Reserva/rejaSalidaPueblo.png" id="1_4gpjk"]
+
+[node name="Node2D" type="Node2D" unique_id=746012953]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=385462825]
+position = Vector2(-1, 16.999998)
+scale = Vector2(0.864, 0.882)
+texture = ExtResource("1_4gpjk")

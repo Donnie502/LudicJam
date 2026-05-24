@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://2nata5lkjcml"
+path="res://.godot/imported/si_Iglesia.dialogue-0daea63d9e115c7866ad4a67179a925f.tres"
+
+[deps]
+
+source_file="res://dialogues/si_Iglesia.dialogue"
+dest_files=["res://.godot/imported/si_Iglesia.dialogue-0daea63d9e115c7866ad4a67179a925f.tres"]
+
+[params]
+
+defaults=true

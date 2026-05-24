@@ -4,10 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://crv8rglddfebw" path="res://node_2d.tscn" id="1_txwpf"]
 [ext_resource type="PackedScene" uid="uid://5tymkgxi4r7n" path="res://menu/scenes/fade_transition.tscn" id="3_c71sj"]
 [ext_resource type="PackedScene" uid="uid://s8ebrfxlr246" path="res://LlaveTirada.tscn" id="4_y6eed"]
+[ext_resource type="Script" uid="uid://dbo4a4jo0h7y5" path="res://menu/scenes/entrada_iglesia.gd" id="5_85yqa"]
 [ext_resource type="PackedScene" uid="uid://dwijkvcx0yk2i" path="res://Sprites Reserva/Diario.tscn" id="5_kcegm"]
+[ext_resource type="Script" uid="uid://dai6akbqbq1vi" path="res://menu/scenes/salida_desierto.gd" id="6_r8xsp"]
 [ext_resource type="PackedScene" uid="uid://rr55eobxg5pk" path="res://scenes/libreta.tscn" id="6_ym1ip"]
 [ext_resource type="Texture2D" uid="uid://drsiyr1hj4lyi" path="res://Sprites Reserva/cartel.png" id="9_ikibh"]
-[ext_resource type="Script" uid="uid://lqsdlbla6i5i" path="res://menu/scenes/salida.gd" id="9_jfxo2"]
 [ext_resource type="Texture2D" uid="uid://bjvvu86h7sy4c" path="res://Sprites Reserva/cartel minas naica.png" id="10_85yqa"]
 [ext_resource type="Texture2D" uid="uid://ubi62nhffauk" path="res://Sprites Reserva/iglesia.png" id="11_85yqa"]
 
@@ -51,11 +52,18 @@ scale = Vector2(0.5, 0.5)
 [node name="Libreta" parent="CanvasLayer" unique_id=483968865 instance=ExtResource("6_ym1ip")]
 visible = false
 
-[node name="salida" type="Area2D" parent="." unique_id=1054351308]
-script = ExtResource("9_jfxo2")
+[node name="EntradaIglesia" type="Area2D" parent="." unique_id=1054351308]
+script = ExtResource("5_85yqa")
 
-[node name="salida_minas" type="CollisionShape2D" parent="salida" unique_id=428279375]
+[node name="salida_minas" type="CollisionShape2D" parent="EntradaIglesia" unique_id=428279375]
 position = Vector2(3580, 328)
+shape = SubResource("RectangleShape2D_ikibh")
+
+[node name="SalidaDesierto" type="Area2D" parent="." unique_id=1246352075]
+script = ExtResource("6_r8xsp")
+
+[node name="salida_minas" type="CollisionShape2D" parent="SalidaDesierto" unique_id=398449099]
+position = Vector2(4446, 328)
 shape = SubResource("RectangleShape2D_ikibh")
 
 [node name="Limites" type="Node2D" parent="." unique_id=1388648389]

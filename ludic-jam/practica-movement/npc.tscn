@@ -17,6 +17,7 @@ shape = SubResource("CircleShape2D_kh24r")
 position = Vector2(-1, -12.9999695)
 scale = Vector2(0.196875, 0.16197917)
 texture = ExtResource("2_kh24r")
+flip_h = true
 
 [node name="exclamacion" type="Sprite2D" parent="." unique_id=1468835271]
 position = Vector2(2.999998, -252)
