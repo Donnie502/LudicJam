@@ -3,6 +3,44 @@
 [ext_resource type="Texture2D" uid="uid://bj5yhqt313dhf" path="res://scenes/scene2/escenario 2 mock.png" id="1_l3f1p"]
 [ext_resource type="PackedScene" uid="uid://crv8rglddfebw" path="res://node_2d.tscn" id="2_isegt"]
 [ext_resource type="PackedScene" uid="uid://rr55eobxg5pk" path="res://scenes/libreta.tscn" id="3_isegt"]
+[ext_resource type="PackedScene" uid="uid://1cji7bm7rp1r" path="res://scenes/scene2/fireball.tscn" id="4_idyeo"]
+
+[sub_resource type="Animation" id="Animation_1tjm6"]
+length = 40.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 39.577866),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-701, -343), Vector2(1675, -21)]
+}
+
+[sub_resource type="Animation" id="Animation_k80hx"]
+resource_name = "movimientoFireball"
+length = 40.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 39.577866),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-701, -343), Vector2(1781, -86)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k5m2e"]
+_data = {
+&"RESET": SubResource("Animation_1tjm6"),
+&"movimientoFireball": SubResource("Animation_k80hx")
+}
 
 [node name="Scene2" type="Node2D" unique_id=1882154578]
 
@@ -17,3 +55,11 @@ scale = Vector2(0.4, 0.4)
 
 [node name="Libreta" parent="CanvasLayer" unique_id=483968865 instance=ExtResource("3_isegt")]
 visible = false
+
+[node name="Node2D" parent="." unique_id=1760647749 instance=ExtResource("4_idyeo")]
+position = Vector2(-701, -343)
+rotation = 0.34906584
+scale = Vector2(0.3, 0.3)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D" unique_id=1193931895]
+libraries/ = SubResource("AnimationLibrary_k5m2e")

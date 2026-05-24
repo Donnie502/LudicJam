@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://dwijkvcx0yk2i" path="res://Sprites Reserva/Diario.tscn" id="5_kcegm"]
 [ext_resource type="PackedScene" uid="uid://rr55eobxg5pk" path="res://scenes/libreta.tscn" id="6_ym1ip"]
 [ext_resource type="PackedScene" uid="uid://dek5t7vl6o7bj" path="res://npc.tscn" id="7_y6eed"]
+[ext_resource type="Texture2D" uid="uid://drsiyr1hj4lyi" path="res://Sprites Reserva/cartel.png" id="9_ikibh"]
 [ext_resource type="Script" uid="uid://lqsdlbla6i5i" path="res://menu/scenes/salida.gd" id="9_jfxo2"]
+[ext_resource type="Texture2D" uid="uid://bjvvu86h7sy4c" path="res://Sprites Reserva/cartel minas naica.png" id="10_85yqa"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sot3g"]
 load_path = "res://.godot/imported/escena1prueba.png-e1c5e06643fdfe1293e77c3bdf265ee8.ctex"
@@ -71,3 +73,12 @@ shape = SubResource("RectangleShape2D_ikibh")
 [node name="LimiteInferior" type="StaticBody2D" parent="Limites" unique_id=2052448280]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/LimiteInferior" unique_id=1185468503]
+
+[node name="cartelTutorial" type="Sprite2D" parent="." unique_id=1026615501]
+position = Vector2(1151.9999, 427.99997)
+scale = Vector2(0.702, 0.58)
+texture = ExtResource("9_ikibh")
+
+[node name="cartelMinas" type="Sprite2D" parent="." unique_id=1693838760]
+position = Vector2(4488, 400)
+texture = ExtResource("10_85yqa")
