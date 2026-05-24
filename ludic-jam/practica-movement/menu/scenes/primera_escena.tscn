@@ -2,13 +2,15 @@
 
 [ext_resource type="Script" uid="uid://dgl7dq5qsi82l" path="res://menu/scenes/primera_escena.gd" id="1_g71ks"]
 [ext_resource type="PackedScene" uid="uid://crv8rglddfebw" path="res://node_2d.tscn" id="1_txwpf"]
-[ext_resource type="Texture2D" uid="uid://bim3mxqkqhgmb" path="res://menu/scenes/escena1prueba.png" id="2_c71sj"]
 [ext_resource type="PackedScene" uid="uid://5tymkgxi4r7n" path="res://menu/scenes/fade_transition.tscn" id="3_c71sj"]
 [ext_resource type="PackedScene" uid="uid://s8ebrfxlr246" path="res://LlaveTirada.tscn" id="4_y6eed"]
 [ext_resource type="PackedScene" uid="uid://dwijkvcx0yk2i" path="res://Sprites Reserva/Diario.tscn" id="5_kcegm"]
 [ext_resource type="PackedScene" uid="uid://rr55eobxg5pk" path="res://scenes/libreta.tscn" id="6_ym1ip"]
 [ext_resource type="PackedScene" uid="uid://dek5t7vl6o7bj" path="res://npc.tscn" id="7_y6eed"]
 [ext_resource type="Script" uid="uid://lqsdlbla6i5i" path="res://menu/scenes/salida.gd" id="9_jfxo2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sot3g"]
+load_path = "res://.godot/imported/escena1prueba.png-e1c5e06643fdfe1293e77c3bdf265ee8.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikibh"]
 size = Vector2(61.5, 527)
@@ -17,10 +19,10 @@ size = Vector2(61.5, 527)
 script = ExtResource("1_g71ks")
 menu_libreta = NodePath("CanvasLayer/Libreta")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1334505764]
+[node name="Fondo" type="Sprite2D" parent="." unique_id=1334505764]
 position = Vector2(2500, 495)
 scale = Vector2(0.2834219, 0.3301562)
-texture = ExtResource("2_c71sj")
+texture = SubResource("CompressedTexture2D_sot3g")
 
 [node name="Character" parent="." unique_id=593136599 instance=ExtResource("1_txwpf")]
 position = Vector2(429, 506)
@@ -37,7 +39,6 @@ scale = Vector2(0.5, 0.5)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1290073855]
 
 [node name="Libreta" parent="CanvasLayer" unique_id=483968865 instance=ExtResource("6_ym1ip")]
-process_mode = 3
 visible = false
 
 [node name="npc" parent="." unique_id=1085456900 instance=ExtResource("7_y6eed")]
@@ -52,3 +53,21 @@ script = ExtResource("9_jfxo2")
 [node name="salida_minas" type="CollisionShape2D" parent="salida" unique_id=428279375]
 position = Vector2(4496, 280)
 shape = SubResource("RectangleShape2D_ikibh")
+
+[node name="Limites" type="Node2D" parent="." unique_id=1388648389]
+
+[node name="LimiteIzquierdo" type="StaticBody2D" parent="Limites" unique_id=1873046175]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/LimiteIzquierdo" unique_id=1752887171]
+
+[node name="LimiteDerecho" type="StaticBody2D" parent="Limites" unique_id=989277029]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/LimiteDerecho" unique_id=1441578078]
+
+[node name="LimiteSuperior" type="StaticBody2D" parent="Limites" unique_id=2047662573]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/LimiteSuperior" unique_id=1246958402]
+
+[node name="LimiteInferior" type="StaticBody2D" parent="Limites" unique_id=2052448280]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/LimiteInferior" unique_id=1185468503]

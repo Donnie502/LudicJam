@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://mtb104dugx06"
+path="res://.godot/imported/Escena2.dialogue-8efa8b7bc30ccbb84dbc3555f52d9d32.tres"
+
+[deps]
+
+source_file="res://dialogues/Escena2.dialogue"
+dest_files=["res://.godot/imported/Escena2.dialogue-8efa8b7bc30ccbb84dbc3555f52d9d32.tres"]
+
+[params]
+
+defaults=true
