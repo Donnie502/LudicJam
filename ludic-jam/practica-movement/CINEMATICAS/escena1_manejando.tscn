@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://bx1vu77c5i8hq"]
+
+[ext_resource type="Texture2D" uid="uid://bs473vnlch00b" path="res://CINEMATICAS/escena1manejando-Sheet.png" id="1_85xfp"]
+[ext_resource type="Script" uid="uid://cdutsgpslsxft" path="res://CINEMATICAS/escena_1_manejando.gd" id="1_jy2oh"]
+[ext_resource type="Script" uid="uid://b1oo17pwri16x" path="res://CINEMATICAS/animated_sprite_2d.gd" id="2_4jwyn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jwyn"]
+atlas = ExtResource("1_85xfp")
+region = Rect2(0, 0, 1200, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jy2oh"]
+atlas = ExtResource("1_85xfp")
+region = Rect2(1200, 0, 1200, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fabhp"]
+atlas = ExtResource("1_85xfp")
+region = Rect2(0, 800, 1200, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omok1"]
+atlas = ExtResource("1_85xfp")
+region = Rect2(1200, 800, 1200, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iwihv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jwyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jy2oh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fabhp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omok1")
+}],
+"loop": true,
+"name": &"manejando",
+"speed": 7.0
+}]
+
+[sub_resource type="Animation" id="Animation_t4f1p"]
+resource_name = "escena_1_manejando"
+length = 15.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_manejando"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(9.366667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"ir_al_nivel_jugable"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_16376"]
+_data = {
+&"escena_1_manejando": SubResource("Animation_t4f1p")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1290265862]
+script = ExtResource("1_jy2oh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=883823929]
+position = Vector2(570.5, 318)
+scale = Vector2(0.9591667, 0.97999996)
+sprite_frames = SubResource("SpriteFrames_iwihv")
+animation = &"manejando"
+frame_progress = 0.8698081
+script = ExtResource("2_4jwyn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1784603045]
+libraries/ = SubResource("AnimationLibrary_16376")
+autoplay = &"escena_1_manejando"

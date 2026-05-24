@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://7dhvw1yq3ng1"]
+[gd_scene format=3 uid="uid://7dhvw1yq3ng1"]
 
 [ext_resource type="Script" uid="uid://bbexoyodwwdrj" path="res://main_menu.gd" id="1_chmv6"]
 [ext_resource type="Texture2D" uid="uid://d2hxhyet1vmgn" path="res://menu/Buttons/BTN_COMENZAR.png" id="2_jc45y"]
@@ -8,21 +8,21 @@
 [ext_resource type="Texture2D" uid="uid://dwu1hpvf5i0ki" path="res://menu/Buttons/BTN_SALIR_ALT-export.png" id="5_youj7"]
 [ext_resource type="PackedScene" uid="uid://5tymkgxi4r7n" path="res://menu/scenes/fade_transition.tscn" id="7_0tw43"]
 
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="Node2D" unique_id=1256293074]
 script = ExtResource("1_chmv6")
 
-[node name="MenuPrincipal" type="Sprite2D" parent="."]
+[node name="MenuPrincipal" type="Sprite2D" parent="." unique_id=1766338588]
 position = Vector2(574.75, 325.00003)
 scale = Vector2(0.71781254, 0.71999997)
 texture = ExtResource("2_s8mfa")
 
-[node name="Button_manager" type="Control" parent="."]
+[node name="Button_manager" type="Control" parent="." unique_id=1442385346]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Comenzar" type="TextureButton" parent="Button_manager"]
+[node name="Comenzar" type="TextureButton" parent="Button_manager" unique_id=1153129725]
 layout_mode = 0
 offset_left = 71.0
 offset_top = 428.0
@@ -33,7 +33,7 @@ texture_hover = ExtResource("3_s8mfa")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Salir" type="TextureButton" parent="Button_manager"]
+[node name="Salir" type="TextureButton" parent="Button_manager" unique_id=214275969]
 layout_mode = 0
 offset_left = 73.0
 offset_top = 519.0
@@ -44,10 +44,10 @@ texture_hover = ExtResource("5_youj7")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Fade_transition" parent="." instance=ExtResource("7_0tw43")]
+[node name="Fade_transition" parent="." unique_id=249229980 instance=ExtResource("7_0tw43")]
 visible = false
 
-[node name="fade_timer" type="Timer" parent="Fade_transition"]
+[node name="fade_timer" type="Timer" parent="Fade_transition" unique_id=519773893]
 
 [connection signal="pressed" from="Button_manager/Comenzar" to="." method="_on_comenzar_pressed"]
 [connection signal="pressed" from="Button_manager/Salir" to="." method="_on_salir_pressed"]

@@ -27,7 +27,7 @@ func _on_salir_pressed() -> void:
 
 func _on_fade_timer_timeout() -> void:
 	if button_type == "start":
-		get_tree().change_scene_to_file("res://menu/scenes/primera_escena.tscn")
+		get_tree().change_scene_to_file("res://CINEMATICAS/escena1_manejando.tscn")
 	elif button_type == "salir":
 		get_tree().quit()
 		
