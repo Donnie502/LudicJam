@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bljyiqf3un0s5"
+path="res://.godot/imported/Escena 1.dialogue-21ce3c1dd9e65a2f656bd49c0c939510.tres"
+
+[deps]
+
+source_file="res://dialogues/Escena 1.dialogue"
+dest_files=["res://.godot/imported/Escena 1.dialogue-21ce3c1dd9e65a2f656bd49c0c939510.tres"]
+
+[params]
+
+defaults=true
