@@ -33,10 +33,10 @@ position = Vector2(-384, 123)
 texture_filter = 1
 position = Vector2(611, 18)
 
-[node name="EntradaIglesia" type="Area2D" parent="." unique_id=1434326602]
+[node name="SalidaIglesia" type="Area2D" parent="." unique_id=1434326602]
 script = ExtResource("4_l5tf0")
 
-[node name="salida_minas" type="CollisionShape2D" parent="EntradaIglesia" unique_id=218797247]
+[node name="salida_minas" type="CollisionShape2D" parent="SalidaIglesia" unique_id=218797247]
 position = Vector2(-576, 57)
 shape = SubResource("RectangleShape2D_g6blp")
 

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b54dwra0l6tyt"]
 
 [ext_resource type="Texture2D" uid="uid://c7n3taub7wt64" path="res://CINEMATICAS/escenario 2 CORREGIDOFINAL.png" id="1_idyeo"]
+[ext_resource type="PackedScene" uid="uid://dofaxuhwiu8uv" path="res://cartelDespedida.tscn" id="2_1tjm6"]
 [ext_resource type="PackedScene" uid="uid://crv8rglddfebw" path="res://node_2d.tscn" id="2_isegt"]
 [ext_resource type="PackedScene" uid="uid://rr55eobxg5pk" path="res://scenes/libreta.tscn" id="3_isegt"]
 [ext_resource type="PackedScene" uid="uid://1cji7bm7rp1r" path="res://scenes/scene2/fireball.tscn" id="4_idyeo"]
@@ -14,11 +15,20 @@ size = Vector2(7515.0024, 0.00024032593)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vxi2n"]
 size = Vector2(2826.251, 59.999924)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnm88"]
+size = Vector2(2389.0637, 59.999924)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_liojr"]
+size = Vector2(1153.4741, 29.99991)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1s5pl"]
+size = Vector2(949.81226, 29.99991)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j6h68"]
-size = Vector2(1672.503, 29.99991)
+size = Vector2(1425.4124, 29.99991)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k80hx"]
-size = Vector2(4560.5, 7.5004883)
+size = Vector2(4560.5, 2651.2485)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k5m2e"]
 size = Vector2(4560.5, 20)
@@ -65,52 +75,82 @@ _data = {
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2050770963]
 texture = ExtResource("1_idyeo")
 
+[node name="Node2D" parent="Sprite2D" unique_id=85852391 instance=ExtResource("2_1tjm6")]
+position = Vector2(672, 91)
+scale = Vector2(0.275, 0.275)
+
 [node name="Character" parent="." unique_id=1198667270 instance=ExtResource("2_isegt")]
-position = Vector2(-966, 320.99997)
+position = Vector2(-678, 383)
 scale = Vector2(0.4, 0.4)
-
-[node name="Limites" type="StaticBody2D" parent="Character" unique_id=2144543099]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/Limites" unique_id=1396025888]
-position = Vector2(2374.8745, 275.00006)
-scale = Vector2(0.99999976, 0.99999976)
-shape = SubResource("RectangleShape2D_idyeo")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Character/Limites" unique_id=1742534867]
-position = Vector2(2427.4995, -749.9992)
-scale = Vector2(0.99999964, 0.99999964)
-shape = SubResource("RectangleShape2D_1tjm6")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Character/Limites" unique_id=1456155812]
-position = Vector2(1789.9998, -462.49994)
-scale = Vector2(0.9999992, 0.9999992)
-shape = SubResource("RectangleShape2D_vxi2n")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Character/Limites" unique_id=2055678537]
-position = Vector2(1949.9999, -282.49982)
-scale = Vector2(0.99999917, 0.99999917)
-shape = SubResource("RectangleShape2D_j6h68")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Character/Limites" unique_id=1277853542]
-position = Vector2(1933.749, -187.49982)
-scale = Vector2(0.9999988, 0.9999988)
-shape = SubResource("RectangleShape2D_j6h68")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Character/Limites" unique_id=118014613]
-position = Vector2(6149.9995, -989.99994)
-rotation = 1.5707964
-scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("RectangleShape2D_k80hx")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Character/Limites" unique_id=783361278]
-position = Vector2(-1342.4999, -369.99994)
-rotation = 1.5707964
-shape = SubResource("RectangleShape2D_k5m2e")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1487226019]
 
 [node name="Libreta" parent="CanvasLayer" unique_id=483968865 instance=ExtResource("3_isegt")]
 visible = false
+
+[node name="Limites" type="StaticBody2D" parent="CanvasLayer" unique_id=2144543099]
+position = Vector2(-966, 320.99997)
+scale = Vector2(0.4, 0.4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Limites" unique_id=1396025888]
+position = Vector2(2374.8745, 275.00006)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_idyeo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CanvasLayer/Limites" unique_id=1742534867]
+position = Vector2(2427.4995, -749.9992)
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("RectangleShape2D_1tjm6")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="CanvasLayer/Limites" unique_id=1456155812]
+position = Vector2(1722.4998, -494.99982)
+scale = Vector2(0.9999992, 0.9999992)
+shape = SubResource("RectangleShape2D_vxi2n")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="CanvasLayer/Limites" unique_id=1500301121]
+position = Vector2(472.03076, -599.99976)
+scale = Vector2(0.99999905, 0.99999905)
+shape = SubResource("RectangleShape2D_jnm88")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="CanvasLayer/Limites" unique_id=2055678537]
+position = Vector2(591.077, -440.95285)
+rotation = 0.42411494
+scale = Vector2(0.9999989, 0.9999989)
+shape = SubResource("RectangleShape2D_liojr")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="CanvasLayer/Limites" unique_id=670762144]
+position = Vector2(-1127.8088, -789.4045)
+rotation = 0.42411494
+scale = Vector2(0.9999988, 0.9999988)
+shape = SubResource("RectangleShape2D_1s5pl")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="CanvasLayer/Limites" unique_id=119411633]
+position = Vector2(252.49988, -155.00003)
+rotation = 1.5707964
+scale = Vector2(0.9999988, 0.9999988)
+shape = SubResource("RectangleShape2D_1s5pl")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="CanvasLayer/Limites" unique_id=1046464294]
+position = Vector2(3085, -510.00003)
+rotation = -0.65100783
+scale = Vector2(0.9999989, 0.9999989)
+shape = SubResource("RectangleShape2D_liojr")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="CanvasLayer/Limites" unique_id=1277853542]
+position = Vector2(1933.749, -187.49982)
+scale = Vector2(0.9999988, 0.9999988)
+shape = SubResource("RectangleShape2D_j6h68")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CanvasLayer/Limites" unique_id=118014613]
+position = Vector2(4828.123, -989.99927)
+rotation = 1.5707964
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_k80hx")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="CanvasLayer/Limites" unique_id=783361278]
+position = Vector2(-1342.4999, -369.99994)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_k5m2e")
 
 [node name="Node2D" parent="." unique_id=1760647749 instance=ExtResource("4_idyeo")]
 position = Vector2(-701, -343)

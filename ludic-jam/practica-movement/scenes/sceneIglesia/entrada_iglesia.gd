@@ -7,4 +7,5 @@ func _process(_delta):
 		var cuerpos_tocando = get_overlapping_bodies()
 		for cuerpo in cuerpos_tocando:
 			if cuerpo.name == "CharacterBody2D":
+				Progreso.spawn_desde_iglesia = true  # ← nueva línea
 				get_tree().change_scene_to_file(ruta_pueblo)

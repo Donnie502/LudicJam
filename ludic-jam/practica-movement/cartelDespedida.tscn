@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dofaxuhwiu8uv"]
+
+[ext_resource type="Texture2D" uid="uid://bl7lmghe62wm2" path="res://menu/Buttons/GRACIAS.png" id="1_a44iy"]
+
+[node name="Node2D" type="Node2D" unique_id=85852391]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=542089902]
+position = Vector2(57, 98)
+scale = Vector2(1.19, 1.3266667)
+texture = ExtResource("1_a44iy")
